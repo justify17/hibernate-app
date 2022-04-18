@@ -1,5 +1,7 @@
 package com.academy;
 
+import org.hibernate.Session;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -23,4 +25,7 @@ public class DataSource {
         return entityManagerFactory.createEntityManager();
     }
 
+    public Session getSession(){
+        return getEntityManager().unwrap(Session.class);
+    }
 }

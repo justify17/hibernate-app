@@ -14,5 +14,5 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private Role role;
+//    private Role role;
 }

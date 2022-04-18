@@ -11,9 +11,9 @@ public class Ticket {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private Route route;
+//    private Route route;
 
-    private Order order;
+//    private Order order;
     @Column
     private String passportData;
 }

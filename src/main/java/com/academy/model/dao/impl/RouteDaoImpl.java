@@ -8,12 +8,7 @@ import java.util.List;
 public class RouteDaoImpl implements RouteDao {
 
     @Override
-    public void create(Route entity) {
-
-    }
-
-    @Override
-    public void update(Route entity) {
+    public void createOrUpdate(Route entity) {
 
     }
 

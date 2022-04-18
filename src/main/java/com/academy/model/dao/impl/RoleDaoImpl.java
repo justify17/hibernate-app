@@ -8,12 +8,7 @@ import java.util.List;
 public class RoleDaoImpl implements RoleDao {
 
     @Override
-    public void create(Role entity) {
-
-    }
-
-    @Override
-    public void update(Role entity) {
+    public void createOrUpdate(Role entity) {
 
     }
 

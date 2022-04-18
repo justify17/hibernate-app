@@ -12,9 +12,9 @@ public class Route {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column
-    private int idDeparture;
+    private Integer idDeparture;
     @Column
-    private int idArrival;
+    private Integer idArrival;
 
-    private List<Airplane> airplanes;
+//    private List<Airplane> airplanes;
 }

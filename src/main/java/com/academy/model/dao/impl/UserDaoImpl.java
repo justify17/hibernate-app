@@ -8,12 +8,7 @@ import java.util.List;
 public class UserDaoImpl implements UserDao {
 
     @Override
-    public void create(User entity) {
-
-    }
-
-    @Override
-    public void update(User entity) {
+    public void createOrUpdate(User entity) {
 
     }
 

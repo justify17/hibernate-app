@@ -8,12 +8,7 @@ import java.util.List;
 public class OrderDaoImpl implements OrderDao {
 
     @Override
-    public void create(Order entity) {
-
-    }
-
-    @Override
-    public void update(Order entity) {
+    public void createOrUpdate(Order entity) {
 
     }
 

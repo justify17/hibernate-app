@@ -9,12 +9,7 @@ public class TicketDaoImpl implements TicketDao {
 
 
     @Override
-    public void create(Ticket entity) {
-
-    }
-
-    @Override
-    public void update(Ticket entity) {
+    public void createOrUpdate(Ticket entity) {
 
     }
 

@@ -11,9 +11,9 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column
-    private int number;
+    private Integer number;
     @Column
     private String orderDate;
-
-    private User user;
+//
+//    private User user;
 }

@@ -12,7 +12,7 @@ public class Airplane {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private AirCompany airCompany;
-
-    private List<Route> routes;
+//    private AirCompany airCompany;
+//
+//    private List<Route> routes;
 }

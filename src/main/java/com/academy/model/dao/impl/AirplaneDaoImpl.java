@@ -1,19 +1,17 @@
 package com.academy.model.dao.impl;
 
+import com.academy.DataSource;
 import com.academy.model.dao.AirplaneDao;
 import com.academy.model.entity.Airplane;
+import org.hibernate.Session;
 
+import javax.persistence.Query;
 import java.util.List;
 
 public class AirplaneDaoImpl implements AirplaneDao {
 
     @Override
-    public void create(Airplane entity) {
-
-    }
-
-    @Override
-    public void update(Airplane entity) {
+    public void createOrUpdate(Airplane entity) {
 
     }
 
@@ -33,7 +31,12 @@ public class AirplaneDaoImpl implements AirplaneDao {
     }
 
     @Override
-    public List<Airplane> getByAircompanyId(int aircompanyId) {
-        return null;
+    public List<Airplane> getByAirCompanyId(int airCompanyId) {
+        Session session = DataSource.getInstance().getSession();
+
+        Query query = session.createQuery("from airplane where id_aircompany = :airCompanyId");
+        query.setParameter("airCompanyId",airCompanyId);
+
+        return query.getResultList();
     }
 }
