@@ -9,21 +9,14 @@ import org.hibernate.Transaction;
 import javax.persistence.Query;
 import java.util.List;
 
-public class AirCompanyDaoImpl implements AirCompanyDao {
-
-    @Override
-    public void createOrUpdate(AirCompany entity) {
-        Session session = DataSource.getInstance().getSession();
-        Transaction transaction = session.beginTransaction();
-        session.saveOrUpdate(entity);
-        transaction.commit();
-    }
+public class AirCompanyDaoImpl extends DefaultDaoImpl<AirCompany> implements AirCompanyDao {
 
     @Override
     public void delete(AirCompany entity) {
         Session session = DataSource.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
-        session.delete(session.contains(entity) ? entity : session.merge(entity));
+        AirCompany airCompany = session.get(AirCompany.class,entity.getId());
+        session.delete(airCompany);
         transaction.commit();
     }
 

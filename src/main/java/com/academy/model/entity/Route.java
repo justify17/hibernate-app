@@ -11,9 +11,9 @@ public class Route {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column
+    @Column(name = "id_departure")
     private Integer idDeparture;
-    @Column
+    @Column(name = "id_arrival")
     private Integer idArrival;
 
 //    private List<Airplane> airplanes;
