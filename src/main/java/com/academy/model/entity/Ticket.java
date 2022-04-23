@@ -11,9 +11,13 @@ public class Ticket {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-//    private Route route;
+    // to complete
+    @ManyToOne
+    private Route route;
 
-//    private Order order;
-    @Column
+    @OneToOne
+    private Order order;
+
+    @Column(name = "passport_data")
     private String passportData;
 }

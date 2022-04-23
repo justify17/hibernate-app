@@ -6,14 +6,19 @@ import javax.persistence.*;
 
 @Data
 @Entity
+@Table(name = "airport.order")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     @Column
     private Integer number;
-    @Column
+
+    @Column(name = "order_date")
     private String orderDate;
-//
-//    private User user;
+
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "id_user")
+    private User user;
 }
