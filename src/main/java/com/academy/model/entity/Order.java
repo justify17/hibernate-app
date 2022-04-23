@@ -21,4 +21,7 @@ public class Order {
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "id_user")
     private User user;
+
+    @OneToOne(mappedBy = "order")
+    private Ticket ticket;
 }
