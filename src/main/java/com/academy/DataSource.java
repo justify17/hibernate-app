@@ -18,6 +18,7 @@ public class DataSource {
         if (instance == null) {
             instance = new DataSource();
         }
+        // test comment
         return instance;
     }
 
