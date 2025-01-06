@@ -17,7 +17,6 @@ public class TicketDaoImpl extends DefaultDaoImpl<Ticket> implements TicketDao {
         Transaction transaction = session.beginTransaction();
         Ticket ticket = session.get(Ticket.class, entity.getId());
         session.delete(ticket);
-        // HOT FIX DONE
         transaction.commit();
     }
 
